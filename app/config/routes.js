@@ -4,7 +4,7 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var hashHistory = ReactRouter.hashHistory;
 var IndexRoute = ReactRouter.IndexRoute;
-var Nav = require('../containers/Main');
+var Main = require('../containers/Main');
 var Home = require('../components/Home');
 
 var routes = (
