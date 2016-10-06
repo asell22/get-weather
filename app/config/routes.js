@@ -7,7 +7,7 @@ var Main = require('../containers/Main');
 
 var routes = (
   <Router>
-    <Route path="/" component={Main}/>
+    <Route path="/" component={Main} />
   </Router>
 );
 

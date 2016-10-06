@@ -9,7 +9,4 @@ var Hello = React.createClass({
   }
 });
 
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('app')
-);
+module.exports = Hello;
