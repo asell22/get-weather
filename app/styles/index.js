@@ -13,13 +13,15 @@ var styles = {
     fontWeight: '100'
   },
   input: {
-    width: '15%',
+    width: '180px',
+  },
+  center: {
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)'
   },
-  color: {
-    background: '#222'
+  button: {
+    marginTop: '45px'
   }
 }
 
