@@ -1,6 +1,6 @@
 var styles = {
   background: {
-    background: '#4cf1a3',
+    background: '#9fcfb8',
     height: '100vh'
   },
   content: {

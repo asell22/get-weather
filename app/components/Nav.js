@@ -1,18 +1,16 @@
 var React = require('react');
+var nav = require('../styles/Nav').nav;
+var color = require('../styles/Nav').color
+var borderColor = require('../styles/Nav').borderColor
 
 function Nav() {
   return (
-    <nav className="navbar navbar-default navbar-fixed-top">
+    <nav className="navbar navbar-default navbar-fixed-top" style={nav}>
      <div className="container">
        <div className="navbar-header">
-          <a className="navbar-brand" href="#">Get Weather</a>
+          <a className="navbar-brand" href="#" style={color}>Get Weather</a>
        </div>
        <div id="navbar" className="navbar-collapse collapse">
-          {/* <ul className="nav navbar-nav navbar-right">
-           <li><a href="../navbar/">Default</a></li>
-           <li><a href="../navbar-static-top/">Static top</a></li>
-           <li className="active"><a href="./">Fixed top <span className="sr-only">(current)</span></a></li>
-         </ul> */}
           <form className="navbar-form navbar-right">
             <div className="form-group">
               <input type="text" className="form-control" placeholder="Search" />
