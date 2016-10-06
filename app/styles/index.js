@@ -5,13 +5,21 @@ var styles = {
   },
   content: {
     paddingTop: '100px',
-    // background: 'red'
   },
   header: {
     textAlign: 'center',
     fontSize: '50px',
     color: '#fff',
     fontWeight: '100'
+  },
+  input: {
+    width: '15%',
+    position: 'fixed',
+    left: '50%',
+    transform: 'translateX(-50%)'
+  },
+  color: {
+    background: '#222'
   }
 }
 
