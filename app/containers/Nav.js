@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Nav = React.createClass({
+var Main = React.createClass({
   render: function() {
     return (
       <div>
@@ -11,4 +11,4 @@ var Nav = React.createClass({
   }
 });
 
-module.exports = Nav;
+module.exports = Main;
