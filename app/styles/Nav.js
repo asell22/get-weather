@@ -5,6 +5,9 @@ var navStyles = {
   },
   color: {
     color: '#fff'
+  },
+  margin: {
+    marginRight: '10px'
   }
 }
 
