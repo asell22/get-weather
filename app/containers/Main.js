@@ -1,5 +1,5 @@
 var React = require('react');
-var Nav = require('../components/Nav');
+var Nav = require('./NavContainer');
 
 var Main = React.createClass({
   render: function() {

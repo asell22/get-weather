@@ -17,7 +17,8 @@ var Nav = React.createClass({
       place: evt.target.value
     })
   },
-  handleFormSubmit: function() {
+  handleFormSubmit: function(evt) {
+    evt.preventDefault();
     console.log(this.state.place);
     this.setState({
       place: ''
