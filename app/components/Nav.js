@@ -1,6 +1,7 @@
 var React = require('react');
-var navStyles = require('../styles/Nav');
+var PropTypes = require('react').PropTypes;
 
+var navStyles = require('../styles/Nav');
 var nav = navStyles.nav,
     color = navStyles.color,
     borderColor = navStyles.borderColor,
@@ -34,6 +35,12 @@ var Nav = function(props) {
       </div>
     </nav>
   )
+}
+
+Nav.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
+  onUpdatePlace: PropTypes.func.isRequired,
+  place: PropTypes.string.isRequired
 }
 
 module.exports = Nav;

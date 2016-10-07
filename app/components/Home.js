@@ -1,8 +1,8 @@
 var React = require('react');
-
+var PropTypes = require('react').PropTypes;
 var merge = require('lodash/merge');
-var styles = require('../styles');
 
+var styles = require('../styles');
 var background = styles.background,
     content = styles.content,
     header = styles.header,
@@ -31,6 +31,12 @@ var Home = function(props) {
       </div>
     </div>
   )
+};
+
+Home.propTypes = {
+  onUpdatePlace: PropTypes.func.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
+  place: PropTypes.string.isRequired
 }
 
 module.exports = Home;
