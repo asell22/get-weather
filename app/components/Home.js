@@ -9,26 +9,38 @@ var background = styles.background,
     center = styles.center,
     button = styles.button;
 
-// function Home() {
-//   return (
-//     <div style={background}>
-//       <div className="container" style={content}>
-//         <h2 style={header}>Enter a City and State</h2>
-//         <input type="text" className="form-control" style={merge({}, input, center)} placeholder="Petaluma, CA"/>
-//         <button className="btn btn-success"  style={merge({}, button, center)}>Get Weather</button>
-//       </div>
-//     </div>
-//   )
-// }
-
 var Home = React.createClass({
+  getInitialState: function() {
+    return {
+      place: ''
+    }
+  },
+  handleUpdatePlace: function(evt) {
+    this.setState({
+      place: evt.target.value
+    })
+  },
+  handleButtonClick: function() {
+    console.log(this.state.place);
+  },
   render: function() {
     return (
       <div style={background}>
         <div className="container" style={content}>
           <h2 style={header}>Enter a City and State</h2>
-          <input type="text" className="form-control" style={merge({}, input, center)} placeholder="Petaluma, CA"/>
-          <button className="btn btn-success"  style={merge({}, button, center)}>Get Weather</button>
+          <input
+            type="text"
+            className="form-control"
+            style={merge({}, input, center)}
+            placeholder="Petaluma, CA"
+            onChange={this.handleUpdatePlace}
+            value={this.state.place}
+          />
+          <button
+            className="btn btn-success"
+            style={merge({}, button, center)}
+            onClick={this.handleButtonClick}> Get Weather
+          </button>
         </div>
       </div>
     )
