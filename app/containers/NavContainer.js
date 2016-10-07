@@ -6,7 +6,7 @@ var nav = navStyles.nav,
     borderColor = navStyles.borderColor,
     margin = navStyles.margin;
 
-var Nav = React.createClass({
+var NavContainer = React.createClass({
   getInitialState: function() {
     return {
       place: ''
@@ -55,4 +55,4 @@ var Nav = React.createClass({
   }
 })
 
-module.exports = Nav;
+module.exports = NavContainer;

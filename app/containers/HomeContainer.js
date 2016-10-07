@@ -1,15 +1,8 @@
 var React = require('react');
-var merge = require('lodash/merge')
-var styles = require('../styles');
+var Home = require('../components/Home');
 
-var background = styles.background,
-    content = styles.content,
-    header = styles.header,
-    input = styles.input,
-    center = styles.center,
-    button = styles.button;
 
-var Home = React.createClass({
+var HomeContainer = React.createClass({
   getInitialState: function() {
     return {
       place: ''
@@ -28,26 +21,13 @@ var Home = React.createClass({
   },
   render: function() {
     return (
-      <div style={background}>
-        <div className="container" style={content}>
-          <h2 style={header}>Enter a City and State</h2>
-          <input
-            type="text"
-            className="form-control"
-            style={merge({}, input, center)}
-            placeholder="Petaluma, CA"
-            onChange={this.handleUpdatePlace}
-            value={this.state.place}
-          />
-          <button
-            className="btn btn-success"
-            style={merge({}, button, center)}
-            onClick={this.handleButtonClick}> Get Weather
-          </button>
-        </div>
-      </div>
+      <Home
+        onUpdatePlace={this.handleUpdatePlace}
+        onButtonClick={this.handleButtonClick}
+        place={this.state.place}
+      />
     )
   }
 })
 
-module.exports = Home;
+module.exports = HomeContainer;
