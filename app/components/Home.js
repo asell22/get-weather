@@ -22,6 +22,9 @@ var Home = React.createClass({
   },
   handleButtonClick: function() {
     console.log(this.state.place);
+    this.setState({
+      place: ''
+    })
   },
   render: function() {
     return (
