@@ -1,5 +1,6 @@
 var React = require('react');
 var Home = require('../components/Home');
+var weatherHelpers = require('../utils/weatherHelpers');
 
 var HomeContainer = React.createClass({
   getInitialState: function() {
@@ -13,6 +14,7 @@ var HomeContainer = React.createClass({
     })
   },
   handleButtonClick: function() {
+    weatherHelpers.getCurrentWeather(this.state.place)
     console.log(this.state.place);
     this.setState({
       place: ''
