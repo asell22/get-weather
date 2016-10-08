@@ -1,7 +1,7 @@
 var React = require('react');
 
 function Forecast(props) {
-  return <div>Forecast Component</div>
+  return <div style={{paddingTop: '100px'}}>Forecast Component</div>
 }
 
 module.exports = Forecast;
