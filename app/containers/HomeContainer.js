@@ -14,7 +14,7 @@ var HomeContainer = React.createClass({
     })
   },
   handleButtonClick: function() {
-    weatherHelpers.getCurrentWeather(this.state.place)
+    weatherHelpers.getFiveDayForecast(this.state.place)
     console.log(this.state.place);
     this.setState({
       place: ''

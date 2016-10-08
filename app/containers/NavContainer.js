@@ -15,7 +15,7 @@ var NavContainer = React.createClass({
   },
   handleFormSubmit: function(evt) {
     evt.preventDefault();
-    weatherHelpers.getCurrentWeather(this.state.place);
+    weatherHelpers.getFiveDayForecast(this.state.place);
     console.log(this.state.place);
     this.setState({
       place: ''
