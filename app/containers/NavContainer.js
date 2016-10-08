@@ -1,5 +1,6 @@
 var React = require('react');
 var Nav = require('../components/Nav');
+var weatherHelpers = require('../utils/weatherHelpers');
 
 var NavContainer = React.createClass({
   getInitialState: function() {
@@ -14,6 +15,7 @@ var NavContainer = React.createClass({
   },
   handleFormSubmit: function(evt) {
     evt.preventDefault();
+    weatherHelpers.getCurrentWeather(this.state.place);
     console.log(this.state.place);
     this.setState({
       place: ''
