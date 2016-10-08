@@ -3,6 +3,9 @@ var Nav = require('../components/Nav');
 var weatherHelpers = require('../utils/weatherHelpers');
 
 var NavContainer = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
   getInitialState: function() {
     return {
       place: ''
@@ -15,6 +18,10 @@ var NavContainer = React.createClass({
   },
   handleFormSubmit: function(evt) {
     evt.preventDefault();
+    var place = this.state.place;
+    this.context.router.push({
+      pathname: '/forecast/' + place
+    });
     weatherHelpers.getFiveDayForecast(this.state.place);
     console.log(this.state.place);
     this.setState({
