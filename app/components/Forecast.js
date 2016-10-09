@@ -6,13 +6,14 @@ function Forecast(props) {
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
-    <div style={{paddingTop: '100px'}}>Forecast Component</div>
+    <div style={{paddingTop: '100px'}}>{props.city}</div>
   )
 }
 
 Forecast.propTypes = {
   isLoading: PropTypes.bool.isRequired,
-  list: PropTypes.array.isRequired
+  list: PropTypes.array.isRequired,
+  city: PropTypes.string.isRequired
 }
 
 module.exports = Forecast;
