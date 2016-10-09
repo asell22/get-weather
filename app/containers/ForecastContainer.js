@@ -10,31 +10,31 @@ var ForecastContainer = React.createClass({
       city: ''
     }
   },
+
+  apiRequest: function(city) {
+    weatherHelpers.getFiveDayForecast(city).then(function(response) {
+      this.setState({
+        isLoading: false,
+        list: response.data.list,
+        city: response.data.city.name + ', ' + response.data.city.country,
+      })
+    }.bind(this))
+  },
+
   componentDidMount: function() {
-    weatherHelpers.getFiveDayForecast(this.props.params.city).then(function(response) {
-      this.setState({
-        isLoading: false,
-        list: response.data.list,
-        city: response.data.city.name + ', ' + response.data.city.country,
-      })
-    }.bind(this))
+    this.apiRequest(this.props.params.city);
   },
+
   componentWillReceiveProps: function(nextProps) {
-    weatherHelpers.getFiveDayForecast(nextProps.params.city).then(function(response) {
-      this.setState({
-        isLoading: false,
-        list: response.data.list,
-        city: response.data.city.name + ', ' + response.data.city.country,
-      })
-    }.bind(this))
+    this.apiRequest(nextProps.params.city)
   },
+
   render: function() {
     return (
       <Forecast
         isLoading={this.state.isLoading}
         list={this.state.list}
         city={this.state.city}
-        key={this.props.location.key}
       />
     )
   }
