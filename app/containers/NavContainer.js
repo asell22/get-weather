@@ -18,8 +18,10 @@ var NavContainer = React.createClass({
   },
   handleFormSubmit: function(evt) {
     evt.preventDefault();
-    weatherHelpers.getFiveDayForecast(this.state.place);
-    console.log(this.state.place);
+    this.context.router.push({
+      pathname: '/forecast/' + this.state.place
+    });
+    
     this.setState({
       place: ''
     })

@@ -22,8 +22,6 @@ var HomeContainer = React.createClass({
       pathname: '/forecast/' + place
     });
 
-    // weatherHelpers.getFiveDayForecast(this.state.place)
-    // console.log(this.state.place);
     this.setState({
       place: ''
     })
