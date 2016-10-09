@@ -11,10 +11,13 @@ var ForecastContainer = React.createClass({
   componentDidMount: function() {
     weatherHelpers.getFiveDayForecast(this.props.params.city).then(function(data) {
       console.log('From FORECAST container:', data);
-    })
+      this.setState({
+        isLoading: false
+      })
+    }.bind(this))
   },
   render: function() {
-    console.log(this.props)
+    console.log('Rendering Forecast Component')
     return (
       <Forecast isLoading={this.state.isLoading}/>
     )
