@@ -1,6 +1,7 @@
 var React = require('react');
 
 function Forecast(props) {
+  console.log('Props from FORECAST component:', props);
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :

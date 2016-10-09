@@ -27,7 +27,7 @@ var Nav = function(props) {
                 style={margin}
                 onChange={props.onUpdatePlace}
                 value={props.place}
-                />
+              />
             </div>
             <button type="submit" className="btn btn-default">Get Weather</button>
           </form>

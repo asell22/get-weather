@@ -5,21 +5,25 @@ var weatherHelpers = require('../utils/weatherHelpers');
 var ForecastContainer = React.createClass({
   getInitialState: function() {
     return {
-      isLoading: true
+      isLoading: true,
+      list: []
     }
   },
   componentDidMount: function() {
-    weatherHelpers.getFiveDayForecast(this.props.params.city).then(function(data) {
-      console.log('From FORECAST container:', data);
+    weatherHelpers.getFiveDayForecast(this.props.params.city).then(function(response) {
       this.setState({
-        isLoading: false
+        isLoading: false,
+        list: response.data.list
       })
     }.bind(this))
   },
   render: function() {
     console.log('Rendering Forecast Component')
     return (
-      <Forecast isLoading={this.state.isLoading}/>
+      <Forecast
+        isLoading={this.state.isLoading}
+        list={this.state.list}
+      />
     )
   }
 })
