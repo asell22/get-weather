@@ -21,8 +21,9 @@ var HomeContainer = React.createClass({
     this.context.router.push({
       pathname: '/forecast/' + place
     });
-    weatherHelpers.getFiveDayForecast(this.state.place)
-    console.log(this.state.place);
+
+    // weatherHelpers.getFiveDayForecast(this.state.place)
+    // console.log(this.state.place);
     this.setState({
       place: ''
     })
