@@ -6,7 +6,14 @@ function Forecast(props) {
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
-    <div style={{paddingTop: '100px'}}>{props.city}</div>
+    <div style={{paddingTop: '100px'}}>
+      <h1>{props.city}</h1>
+      <ul>
+        {props.list.map(function(obj, indx) {
+          return <li key={indx}> {obj.weather[0].description} </li>
+        })}
+      </ul>
+    </div>
   )
 }
 

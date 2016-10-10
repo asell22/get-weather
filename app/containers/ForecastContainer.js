@@ -11,7 +11,7 @@ var ForecastContainer = React.createClass({
     }
   },
 
-  apiRequest: function(city) {
+  apiRequest: function(city) {  
     weatherHelpers.getFiveDayForecast(city).then(function(response) {
       this.setState({
         isLoading: false,
