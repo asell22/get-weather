@@ -14,10 +14,8 @@ var ForecastContainer = React.createClass({
   apiRequest: function(city) {
     weatherHelpers.getWeatherData(city).then(function(response) {
       var list = [];
-      list = list.concat(response[0].data).concat(response[1].data.list)
-      console.log('List:', list);
-      console.log(this.props)
-      // console.log('Response:', response);
+      list = list.concat(response[0].data).concat(response[1].data.list);
+      
       this.setState({
         isLoading: false,
         list: list,

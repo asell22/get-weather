@@ -1,28 +1,18 @@
 var React = require('react');
 var PropTypes = require('react').PropTypes;
+var moment = require('moment');
 
-function getWeekDay(num) {
-  var weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-
-  return weekdays[num];
-}
 
 function Forecast(props) {
+  var day = moment().month();
+  console.log('Day of WeeK:', day);
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
     <div style={{paddingTop: '100px'}}>
       <h1>{props.city}</h1>
       <ul>
-        
+
       </ul>
     </div>
   )
