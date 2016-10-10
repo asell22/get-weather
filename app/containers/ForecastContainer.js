@@ -1,6 +1,7 @@
 var React = require('react');
 var Forecast = require('../components/Forecast');
 var weatherHelpers = require('../utils/weatherHelpers');
+var moment = require('moment');
 
 var ForecastContainer = React.createClass({
   getInitialState: function() {
@@ -11,11 +12,21 @@ var ForecastContainer = React.createClass({
     }
   },
 
+  addDatesToWeatherObjects: function(list) {
+    var day = new Date(Date.now())
+
+    return list.map(function(obj, indx) {
+      var date = moment(day).add(indx, 'day').format('dddd, MMM D');
+      obj.date = date;
+    });
+  },
+
   apiRequest: function(city) {
     weatherHelpers.getWeatherData(city).then(function(response) {
       var list = [];
       list = list.concat(response[0].data).concat(response[1].data.list);
-      
+      this.addDatesToWeatherObjects(list)
+
       this.setState({
         isLoading: false,
         list: list,

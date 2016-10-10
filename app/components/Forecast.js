@@ -1,19 +1,15 @@
 var React = require('react');
 var PropTypes = require('react').PropTypes;
-var moment = require('moment');
-
 
 function Forecast(props) {
-  var day = moment().month();
-  console.log('Day of WeeK:', day);
+  console.log('Props:', props);
+
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
     <div style={{paddingTop: '100px'}}>
       <h1>{props.city}</h1>
-      <ul>
-
-      </ul>
+      <ul></ul>
     </div>
   )
 }
