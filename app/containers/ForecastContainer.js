@@ -11,13 +11,14 @@ var ForecastContainer = React.createClass({
     }
   },
 
-  apiRequest: function(city) {  
-    weatherHelpers.getFiveDayForecast(city).then(function(response) {
-      this.setState({
-        isLoading: false,
-        list: response.data.list,
-        city: response.data.city.name + ', ' + response.data.city.country,
-      })
+  apiRequest: function(city) {
+    weatherHelpers.getWeatherData(city).then(function(response) {
+      console.log('Response:', response);
+      // this.setState({
+      //   isLoading: false,
+      //   list: response.data.list,
+      //   city: response.data.city.name + ', ' + response.data.city.country,
+      // })
     }.bind(this))
   },
 

@@ -1,8 +1,21 @@
 var React = require('react');
 var PropTypes = require('react').PropTypes;
 
+function getWeekDay(num) {
+  var weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  
+  return weekdays[num];
+}
+
 function Forecast(props) {
-  console.log('Props from FORECAST component:', props);
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
