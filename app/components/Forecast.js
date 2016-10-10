@@ -11,7 +11,7 @@ function getWeekDay(num) {
     "Friday",
     "Saturday"
   ];
-  
+
   return weekdays[num];
 }
 
@@ -22,9 +22,7 @@ function Forecast(props) {
     <div style={{paddingTop: '100px'}}>
       <h1>{props.city}</h1>
       <ul>
-        {props.list.map(function(obj, indx) {
-          return <li key={indx}> {obj.weather[0].description} </li>
-        })}
+        
       </ul>
     </div>
   )
