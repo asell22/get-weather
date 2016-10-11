@@ -6,6 +6,7 @@ var bg = styles.background;
 var header = styles.header;
 var list = styles.list;
 var icon = styles.icon;
+var date = styles.date;
 
 function Forecast(props) {
   console.log('Props:', props);
@@ -18,7 +19,7 @@ function Forecast(props) {
       <ul className="row">
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
-          return <li key={obj.listId} className="col-md-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i>{obj.date}</li>
+          return <li key={obj.listId} className="col-md-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={date}>{obj.date}</span></li>
         })}
       </ul>
     </div>

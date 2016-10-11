@@ -13,6 +13,12 @@ var forecastStyles = {
     fontSize: '100px',
     color: '#ddd',
     marginTop: '100px'
+  },
+  date: {
+    display: 'block',
+    marginTop: '20px',
+    fontSize: '25px',
+    fontWeight: '100'
   }
 }
 
