@@ -12,7 +12,7 @@ function Forecast(props) {
       <ul>
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
-          return <li key={obj.listId}>{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px'}}></i></li>
+          return <li key={obj.listId}>{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px', color: '#ddd'}}></i></li>
         })}
       </ul>
     </div>
