@@ -11,7 +11,8 @@ function Forecast(props) {
       <h1>{props.city}</h1>
       <ul>
         {props.list.map(function(obj,indx) {
-          return <li key={obj.listId}>{obj.date} - WEATHER ICON: {obj.weather[0].id} <i className={"wi wi-owm-" + obj.weather[0].id} style={{fontSize: '100px'}}></i></li>
+          var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
+          return <li key={obj.listId}>{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px'}}></i></li>
         })}
       </ul>
     </div>
