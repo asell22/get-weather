@@ -12,7 +12,8 @@ var forecastStyles = {
   icon: {
     fontSize: '100px',
     color: '#ddd',
-    marginTop: '100px'
+    marginTop: '100px',
+    marginLeft: '30px'
   },
   date: {
     display: 'block',
