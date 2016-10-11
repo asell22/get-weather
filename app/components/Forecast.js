@@ -4,6 +4,8 @@ var PropTypes = require('react').PropTypes;
 var styles = require('../styles/Forecast');
 var bg = styles.background;
 var header = styles.header;
+var list = styles.list;
+var icon = styles.icon;
 
 function Forecast(props) {
   console.log('Props:', props);
@@ -16,7 +18,7 @@ function Forecast(props) {
       <ul className="row">
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
-          return <li key={obj.listId} className="col-md-4">{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px', color: '#ddd'}}></i></li>
+          return <li key={obj.listId} className="col-md-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i>{obj.date}</li>
         })}
       </ul>
     </div>
