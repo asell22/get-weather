@@ -2,6 +2,7 @@ var React = require('react');
 var Forecast = require('../components/Forecast');
 var weatherHelpers = require('../utils/weatherHelpers');
 var moment = require('moment');
+var v4 = require('node-uuid').v4;
 
 var ForecastContainer = React.createClass({
   getInitialState: function() {
@@ -18,6 +19,7 @@ var ForecastContainer = React.createClass({
     return list.map(function(obj, indx) {
       var date = moment(day).add(indx, 'day').format('dddd, MMM D');
       obj.date = date;
+      obj.listId = v4();
     });
   },
 

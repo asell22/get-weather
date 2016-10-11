@@ -9,7 +9,11 @@ function Forecast(props) {
     <div style={{paddingTop: '100px'}}>Loading...</div> :
     <div style={{paddingTop: '100px'}}>
       <h1>{props.city}</h1>
-      <ul></ul>
+      <ul>
+        {props.list.map(function(obj,indx) {
+          return <li key={indx}>{obj.date}</li>
+        })}
+      </ul>
     </div>
   )
 }
