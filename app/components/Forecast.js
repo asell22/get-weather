@@ -3,7 +3,7 @@ var PropTypes = require('react').PropTypes;
 
 var styles = require('../styles/Forecast');
 var bg = styles.background;
-var center = styles.center;
+var header = styles.header;
 
 function Forecast(props) {
   console.log('Props:', props);
@@ -12,7 +12,7 @@ function Forecast(props) {
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
     <div style={bg}>
-      <h1 style={center}>{props.city}</h1>
+      <h1 style={header}>{props.city}</h1>
       <ul>
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';

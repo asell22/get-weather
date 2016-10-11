@@ -2,8 +2,9 @@ var forecastStyles = {
   background: {
     paddingTop: '100px'
   },
-  center: {
-    textAlign: 'center'
+  header: {
+    textAlign: 'center',
+    fontWeight: '200'
   }
 }
 
