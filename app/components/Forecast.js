@@ -11,12 +11,12 @@ function Forecast(props) {
   return (
     props.isLoading ?
     <div style={{paddingTop: '100px'}}>Loading...</div> :
-    <div style={bg}>
+    <div style={bg} className="container">
       <h1 style={header}>{props.city}</h1>
-      <ul>
+      <ul className="row">
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
-          return <li key={obj.listId}>{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px', color: '#ddd'}}></i></li>
+          return <li key={obj.listId} className="col-md-4">{obj.date} - WEATHER ICON: {obj.weather[0].icon} <i className={prefix + obj.weather[0].id} style={{fontSize: '100px', color: '#ddd'}}></i></li>
         })}
       </ul>
     </div>
