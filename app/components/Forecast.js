@@ -35,7 +35,8 @@ function Forecast(props) {
               date: date,
               description: description,
               temp: temp,
-              humidity: humidity
+              humidity: humidity,
+              icon: prefix + obj.weather[0].id
             }
           } else {
             var max = obj.temp.max;
@@ -49,7 +50,8 @@ function Forecast(props) {
               description: description,
               max: max,
               min: min,
-              humidity: humidity
+              humidity: humidity,
+              icon: prefix + obj.weather[0].id
             }
           }
 

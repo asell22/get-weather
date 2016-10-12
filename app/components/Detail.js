@@ -6,6 +6,7 @@ function Detail(props) {
   if (details.type === 'current') {
     return (
       <div style={{paddingTop: '300px'}}>
+        <i className={details.icon}></i>
         <h1>{details.city}</h1>
         <h3>{details.description}</h3>
         <h3>{details.temp}</h3>
@@ -15,6 +16,7 @@ function Detail(props) {
   } else {
     return (
       <div style={{paddingTop: '100px'}}>
+        <i className={details.icon}></i>
         <h1>{details.city}</h1>
         <h3>{details.description}</h3>
         <h3>{details.min}</h3>
