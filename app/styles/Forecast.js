@@ -15,7 +15,8 @@ var forecastStyles = {
     fontSize: '100px',
     color: '#ddd',
     marginTop: '50px',
-    marginLeft: '30px'
+    marginLeft: '30px',
+    cursor: 'pointer'
   },
   date: {
     display: 'block',

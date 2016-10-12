@@ -7,6 +7,7 @@ var DetailContainer = React.createClass({
     return (
       <div style={{paddingTop: '100px'}}>
         <p>{details.city}</p>
+        <p>{details.date}</p>
         <p>{details.weather}</p>
         <p>{details.max}</p>
         <p>{details.min}</p>

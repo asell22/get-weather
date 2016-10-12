@@ -2,12 +2,13 @@ var React = require('react');
 var PropTypes = require('react').PropTypes;
 var Link = require('react-router').Link
 
-var styles = require('../styles/Forecast'),
-    bg = styles.background,
+var styles = require('../styles/Forecast');
+
+var bg = styles.background,
     header = styles.header,
     list = styles.list,
     icon = styles.icon,
-    date = styles.date;
+    dateStyle = styles.date;
 
 function Forecast(props) {
   console.log('Props:', props);
@@ -21,6 +22,7 @@ function Forecast(props) {
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
           var city = props.city;
+          var date = props.date;
           var weather = obj.weather[0].description;
           var max = obj.main === undefined ? obj.temp.max : obj.main.temp_max;
           var min = obj.main === undefined ? obj.temp.min : obj.main.temp_min;
@@ -28,13 +30,14 @@ function Forecast(props) {
 
           var details = {
             city: city,
+            date: date,
             weather: weather,
             max: max,
             min: min,
             humidity: humidity
           }
 
-          return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={date}>{obj.date}</span></li>
+          return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
         })}
       </ul>
     </div>
