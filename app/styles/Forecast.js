@@ -8,7 +8,8 @@ var forecastStyles = {
     fontSize: '50px'
   },
   list: {
-    listStyleType: 'none'
+    listStyleType: 'none',
+    color: '#000'
   },
   icon: {
     fontSize: '100px',

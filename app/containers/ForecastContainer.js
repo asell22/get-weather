@@ -5,6 +5,9 @@ var moment = require('moment');
 var v4 = require('node-uuid').v4;
 
 var ForecastContainer = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
   getInitialState: function() {
     return {
       isLoading: true,
@@ -12,7 +15,12 @@ var ForecastContainer = React.createClass({
       city: ''
     }
   },
-
+  handleDetailClick: function(details) {
+    var city = this.state.city;
+    this.context.router.push({
+      pathname: '/detail/' + city
+    })
+  },
   addDatesToWeatherObjects: function(list) {
     var day = new Date(Date.now())
 
@@ -51,6 +59,7 @@ var ForecastContainer = React.createClass({
         isLoading={this.state.isLoading}
         list={this.state.list}
         city={this.state.city}
+        onDetailClick={this.handleDetailClick}
       />
     )
   }
