@@ -23,19 +23,39 @@ function Forecast(props) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
           var city = props.city;
           var date = props.date;
-          var weather = obj.weather[0].description;
+          var description = obj.weather[0].description;
+
+          if (obj.main) {
+            var temp = obj.main.temp;
+            var humidity = obj.main.humidity;
+
+            var details = {
+              city: city,
+              date: date,
+              description: description,
+              temp: temp,
+              humidity: humidity
+            }
+          } else {
+            var max = obj.temp.max;
+            var min = obj.temp.min;
+            var humidity = obj.humidity;
+
+            var details = {
+              city: city,
+              date: date,
+              description: description,
+              max: max,
+              min: min,
+              humidity: humidity
+            }
+          }
+
           var max = obj.main === undefined ? obj.temp.max : obj.main.temp_max;
           var min = obj.main === undefined ? obj.temp.min : obj.main.temp_min;
           var humidity = obj.main === undefined ? obj.humidity : obj.main.humidity;
 
-          var details = {
-            city: city,
-            date: date,
-            weather: weather,
-            max: max,
-            min: min,
-            humidity: humidity
-          }
+
 
           return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
         })}
