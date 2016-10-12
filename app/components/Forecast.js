@@ -44,7 +44,8 @@ function Forecast(props) {
 Forecast.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   list: PropTypes.array.isRequired,
-  city: PropTypes.string.isRequired
+  city: PropTypes.string.isRequired,
+  onDetailClick: PropTypes.func.isRequired
 }
 
 module.exports = Forecast;

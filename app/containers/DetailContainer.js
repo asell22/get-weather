@@ -1,10 +1,18 @@
 var React = require('react');
 
 var Detail = React.createClass({
-  
   render: function() {
-    console.log(this.props.location.state.details)
-    return <p style={{paddingTop: '100px'}}>Detail</p>
+    var details = this.props.location.state.details;
+    console.log(details);
+    return (
+      <div style={{paddingTop: '100px'}}>
+        <p>{details.city}</p>
+        <p>{details.weather}</p>
+        <p>{details.max}</p>
+        <p>{details.min}</p>
+        <p>{details.humidity}</p>
+      </div>
+    )
   }
 })
 
