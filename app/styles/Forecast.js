@@ -1,10 +1,11 @@
 var forecastStyles = {
   background: {
-    paddingTop: '100px'
+    paddingTop: '60px'
   },
   header: {
     textAlign: 'center',
-    fontWeight: '200'
+    fontWeight: '100',
+    fontSize: '50px'
   },
   list: {
     listStyleType: 'none'
@@ -12,7 +13,7 @@ var forecastStyles = {
   icon: {
     fontSize: '100px',
     color: '#ddd',
-    marginTop: '100px',
+    marginTop: '50px',
     marginLeft: '30px'
   },
   date: {

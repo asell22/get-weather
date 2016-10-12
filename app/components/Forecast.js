@@ -13,7 +13,7 @@ function Forecast(props) {
 
   return (
     props.isLoading ?
-    <div style={{paddingTop: '100px'}}>Loading...</div> :
+    <div style={bg}>Loading...</div> :
     <div style={bg} className="container">
       <h1 style={header}>{props.city}</h1>
       <ul className="row">
