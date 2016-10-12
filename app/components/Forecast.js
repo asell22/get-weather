@@ -34,7 +34,7 @@ function Forecast(props) {
             humidity: humidity
           }
 
-          return <li onClick={props.onDetailClick} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={date}>{obj.date}</span></li>
+          return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={date}>{obj.date}</span></li>
         })}
       </ul>
     </div>

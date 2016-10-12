@@ -18,7 +18,8 @@ var ForecastContainer = React.createClass({
   handleDetailClick: function(details) {
     var city = this.state.city;
     this.context.router.push({
-      pathname: '/detail/' + city
+      pathname: '/detail/' + city,
+      state: {details: details}
     })
   },
   addDatesToWeatherObjects: function(list) {
