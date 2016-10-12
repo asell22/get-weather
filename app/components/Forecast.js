@@ -30,6 +30,7 @@ function Forecast(props) {
             var humidity = obj.main.humidity;
 
             var details = {
+              type: 'current',
               city: city,
               date: date,
               description: description,
@@ -42,6 +43,7 @@ function Forecast(props) {
             var humidity = obj.humidity;
 
             var details = {
+              type: 'forecast',
               city: city,
               date: date,
               description: description,
@@ -51,13 +53,7 @@ function Forecast(props) {
             }
           }
 
-          var max = obj.main === undefined ? obj.temp.max : obj.main.temp_max;
-          var min = obj.main === undefined ? obj.temp.min : obj.main.temp_min;
-          var humidity = obj.main === undefined ? obj.humidity : obj.main.humidity;
-
-
-
-          return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
+        return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
         })}
       </ul>
     </div>
