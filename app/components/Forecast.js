@@ -1,5 +1,6 @@
 var React = require('react');
 var PropTypes = require('react').PropTypes;
+var Link = require('react-router').Link
 
 var styles = require('../styles/Forecast');
 var bg = styles.background;
