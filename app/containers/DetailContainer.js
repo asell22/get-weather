@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Detail = React.createClass({
+var DetailContainer = React.createClass({
   render: function() {
     var details = this.props.location.state.details;
     console.log(details);
@@ -16,4 +16,4 @@ var Detail = React.createClass({
   }
 })
 
-module.exports = Detail;
+module.exports = DetailContainer;

@@ -27,7 +27,11 @@ var ForecastContainer = React.createClass({
 
     return list.map(function(obj, indx) {
       var date = moment(day).add(indx, 'day').format('dddd, MMM D');
-      obj.date = date;
+      if (indx === 0) {
+        obj.date = 'Current Weather'
+      } else {
+        obj.date = date;
+      }
       obj.listId = v4();
     });
   },
