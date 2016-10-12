@@ -1,13 +1,26 @@
 var React = require('react');
 
 function Detail(props) {
-  if (props.type === 'current') {
+  var details = props.details
+  console.log(props)
+  if (details.type === 'current') {
     return (
-      <h1 style={{paddingTop: '100px'}}>Current Weather</h1>
+      <div style={{paddingTop: '300px'}}>
+        <h1>{details.city}</h1>
+        <h3>{details.description}</h3>
+        <h3>{details.temp}</h3>
+        <h3>{details.humidity}</h3>
+      </div>
     )
   } else {
     return (
-      <h1 style={{paddingTop: '100px'}}>Forecasted Weather</h1>
+      <div style={{paddingTop: '100px'}}>
+        <h1>{details.city}</h1>
+        <h3>{details.description}</h3>
+        <h3>{details.min}</h3>
+        <h3>{details.max}</h3>
+        <h3>{details.humidity}</h3>
+      </div>
     )
   }
 }
