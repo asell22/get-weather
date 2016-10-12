@@ -1,9 +1,15 @@
 var React = require('react');
 
 function Detail(props) {
-  return (
-    <h1 style={{paddingTop: '100px'}}>{props.type}</h1>
-  )
+  if (props.type === 'current') {
+    return (
+      <h1 style={{paddingTop: '100px'}}>Current Weather</h1>
+    )
+  } else {
+    return (
+      <h1 style={{paddingTop: '100px'}}>Forecasted Weather</h1>
+    )
+  }
 }
 
 module.exports = Detail
