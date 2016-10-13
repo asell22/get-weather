@@ -1,5 +1,4 @@
 var React = require('react');
-var Detail = require('../components/Detail');
 var CurrentDetails = require('../components/CurrentDetails');
 var ForecastDetails = require('../components/ForecastDetails');
 

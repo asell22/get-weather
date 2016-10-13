@@ -1,9 +1,18 @@
 module.exports = {
   icon: {
-    fontSize: '180px',
+    fontSize: '150px',
     color: '#ddd',
-    marginTop: '50px',
-    marginLeft: '30px',
-    cursor: 'pointer'
+    marginTop: '50px'
+  },
+  date: {
+    textAlign: 'center',
+    fontWeight: '200',
+    fontSize: '25px',
+    marginTop: '40px'
+  },
+  header: {
+    textAlign: 'center',
+    fontWeight: '100',
+    fontSize: '50px'
   }
 }
