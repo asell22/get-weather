@@ -18,7 +18,7 @@ var styles = {
   center: {
     position: 'fixed',
     left: '50%',
-    transform: 'translateX(-50%)'
+    transform: 'translateX(-50%)',
   },
   button: {
     marginTop: '45px'

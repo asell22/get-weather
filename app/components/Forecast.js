@@ -22,8 +22,8 @@ function Forecast(props) {
         {props.list.map(function(obj,indx) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
           var city = props.city;
-          var date = props.date;
-          var description = obj.weather[0].description;
+          var date = obj.date;
+          var description = obj.description;
 
           if (obj.main) {
             var temp = obj.main.temp;
