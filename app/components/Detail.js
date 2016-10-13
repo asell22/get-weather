@@ -28,13 +28,15 @@ function Detail(props) {
   } else {
     return (
       <div style={{paddingTop: '100px'}} className="container">
-        <i className={details.icon} style={icon}></i>
-        <h1 style={header}>{details.date}</h1>
-        <h1>{details.city}</h1>
-        <h3>{details.description}</h3>
-        <h3>{details.min}</h3>
-        <h3>{details.max}</h3>
-        <h3>{details.humidity}</h3>
+        <div style={merge({}, center, {textAlign: 'center'})}>
+          <i className={details.icon} style={icon}></i>
+          <h1 style={header}>{details.date}</h1>
+          <h1>{details.city}</h1>
+          <h3>{details.description}</h3>
+          <h3>{details.min}</h3>
+          <h3>{details.max}</h3>
+          <h3>{details.humidity}</h3>
+        </div>
       </div>
     )
   }

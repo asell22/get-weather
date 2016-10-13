@@ -23,7 +23,7 @@ function Forecast(props) {
           var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
           var city = props.city;
           var date = obj.date;
-          var description = obj.description;
+          var description = obj.weather[0].description;
 
           if (obj.main) {
             var temp = obj.main.temp;
