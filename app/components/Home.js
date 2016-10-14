@@ -15,19 +15,22 @@ var Home = function(props) {
     <div style={background}>
       <div className="container" style={content}>
         <h2 style={header}>Enter a City and State</h2>
-        <input
-          type="text"
-          className="form-control"
-          style={merge({}, input, center)}
-          placeholder="Petaluma, CA"
-          onChange={props.onUpdatePlace}
-          value={props.place}
-        />
-        <button
-          className="btn btn-success"
-          style={merge({}, button, center)}
-          onClick={props.onButtonClick}> Get Weather
-        </button>
+        <form onSubmit={props.onFormSubmit}>
+          <input
+            type="text"
+            className="form-control"
+            style={merge({}, input, center)}
+            placeholder="Petaluma, CA"
+            onChange={props.onUpdatePlace}
+            value={props.place}
+          />
+          <button
+            className="btn btn-success"
+            style={merge({}, button, center)}
+          >
+            Get Weather
+          </button>
+        </form>
       </div>
     </div>
   )
@@ -35,7 +38,7 @@ var Home = function(props) {
 
 Home.propTypes = {
   onUpdatePlace: PropTypes.func.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
+  onFormSubmit: PropTypes.func.isRequired,
   place: PropTypes.string.isRequired
 }
 

@@ -16,7 +16,7 @@ var HomeContainer = React.createClass({
       place: evt.target.value
     })
   },
-  handleButtonClick: function() {
+  handleFormSubmit: function() {
     var place = this.state.place;
     this.context.router.push({
       pathname: '/forecast/' + place
@@ -30,7 +30,7 @@ var HomeContainer = React.createClass({
     return (
       <Home
         onUpdatePlace={this.handleUpdatePlace}
-        onButtonClick={this.handleButtonClick}
+        onFormSubmit={this.handleFormSubmit}
         place={this.state.place}
       />
     )
