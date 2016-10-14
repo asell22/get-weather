@@ -23,6 +23,12 @@ var forecastStyles = {
     marginTop: '20px',
     fontSize: '25px',
     fontWeight: '100'
+  },
+  loading: {
+    paddingTop: '60px',
+    fontWeight: '200',
+    fontSize: '100px',
+    textAlign: 'center'
   }
 }
 

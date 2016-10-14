@@ -8,14 +8,15 @@ var bg = styles.background,
     header = styles.header,
     list = styles.list,
     icon = styles.icon,
-    dateStyle = styles.date;
+    dateStyle = styles.date,
+    loading = styles.loading;
 
 function Forecast(props) {
   console.log('Props:', props);
 
   return (
     props.isLoading ?
-    <div style={bg}>Loading...</div> :
+    <div style={loading}>Loading...</div> :
     <div style={bg} className="container">
       <h1 style={header}>{props.city}</h1>
       <ul className="row">
