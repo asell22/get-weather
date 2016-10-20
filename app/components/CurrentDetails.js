@@ -1,26 +1,25 @@
-var React = require('react');
-var merge = require('lodash/merge');
+import React from 'react';
+import { merge } from 'lodash';
 
-var icon = require('../styles/Detail').icon;
-var date = require('../styles/Detail').date;
+var iconStyle = require('../styles/Detail').icon;
+var dateStyle = require('../styles/Detail').date;
 var center = require('../styles/index').center;
 var header = require('../styles/Detail').header;
 
-function CurrentDetails(props) {
-  var details = props.details;
-
+function CurrentDetails({details}) {
+  const { icon, date, city, description, temp, humidity } = details;
   return (
     <div style={{paddingTop: '100px'}} className="container">
       <div style={merge({}, center, {textAlign: 'center'})}>
-        <i className={details.icon} style={icon}></i>
-        <h2 style={date}>{details.date}</h2>
-        <h1 style={header}>{details.city}</h1>
-        <h1 style={header}>{details.description}</h1>
-        <h1 style={header}>temp: {details.temp} degrees</h1>
-        <h1 style={header}>humidity: {details.humidity}%</h1>
+        <i className={icon} style={iconStyle}></i>
+        <h2 style={dateStyle}>{date}</h2>
+        <h1 style={header}>{city}</h1>
+        <h1 style={header}>{description}</h1>
+        <h1 style={header}>temp: {temp} degrees</h1>
+        <h1 style={header}>humidity: {humidity}%</h1>
       </div>
     </div>
   )
 }
 
-module.exports = CurrentDetails;
+export default CurrentDetails;

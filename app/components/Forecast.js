@@ -12,7 +12,6 @@ var bg = styles.background,
     loading = styles.loading;
 
 function Forecast(props) {
-  console.log('Props:', props);
 
   return (
     props.isLoading ?
