@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from '../components/Nav';
-var weatherHelpers = require('../utils/weatherHelpers');
 
 const NavContainer = React.createClass({
 

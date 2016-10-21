@@ -1,6 +1,6 @@
 import React from 'react';
 import Forecast from '../components/Forecast';
-var weatherHelpers = require('../utils/weatherHelpers');
+import helpers from '../utils/weatherHelpers';
 import moment from 'moment';
 import { v4 } from 'node-uuid';
 
@@ -37,7 +37,7 @@ var ForecastContainer = React.createClass({
   },
 
   apiRequest: function(city) {
-    weatherHelpers.getWeatherData(city).then(function(response) {
+    helpers.getWeatherData(city).then(function(response) {
       var list = [];
       list = list.concat(response[0].data).concat(response[1].data.list);
       this.addDatesToWeatherObjects(list)

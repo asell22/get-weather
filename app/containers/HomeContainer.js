@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from '../components/Home';
-var weatherHelpers = require('../utils/weatherHelpers');
 
 const HomeContainer = React.createClass({
   contextTypes: {
@@ -38,4 +37,3 @@ const HomeContainer = React.createClass({
 })
 
 export default HomeContainer;
-// module.exports = HomeContainer;

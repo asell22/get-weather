@@ -1,5 +1,5 @@
-var axios = require('axios');
-var API_Key = require('../../key');
+const axios = require('axios');
+const API_Key = require('../../key');
 
 function getCurrentWeather(location) {
   return axios.get('http://api.openweathermap.org/data/2.5/weather?q='+location+'&type=accurate&units=imperial&APPID='+API_Key);
@@ -15,4 +15,4 @@ var helpers = {
   }
 };
 
-module.exports = helpers;
+export default helpers;
