@@ -1,13 +1,13 @@
-var React = require('react');
-var PropTypes = require('react').PropTypes;
+import React, { PropTypes } from 'react';
 
-var navStyles = require('../styles/Nav');
-var nav = navStyles.nav,
-    color = navStyles.color,
-    borderColor = navStyles.borderColor,
-    margin = navStyles.margin;
 
-var Nav = function(props) {
+const navStyles = require('../styles/Nav');
+const nav = navStyles.nav,
+      color = navStyles.color,
+      borderColor = navStyles.borderColor,
+      margin = navStyles.margin;
+
+const Nav = function({ onFormSubmit, onUpdatePlace, place }) {
   return (
     <nav className="navbar navbar-default navbar-fixed-top" style={nav}>
       <div className="container">
@@ -17,7 +17,7 @@ var Nav = function(props) {
         <div id="navbar" className="navbar-collapse collapse">
           <form
             className="navbar-form navbar-right"
-            onSubmit={props.onFormSubmit}
+            onSubmit={onFormSubmit}
           >
             <div className="form-group">
               <input
@@ -25,8 +25,8 @@ var Nav = function(props) {
                 className="form-control"
                 placeholder="Petaluma, CA"
                 style={margin}
-                onChange={props.onUpdatePlace}
-                value={props.place}
+                onChange={onUpdatePlace}
+                value={place}
               />
             </div>
             <button type="submit" className="btn btn-default">Get Weather</button>
@@ -43,4 +43,4 @@ Nav.propTypes = {
   place: PropTypes.string.isRequired
 }
 
-module.exports = Nav;
+export default Nav;

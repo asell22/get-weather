@@ -1,5 +1,5 @@
 var React = require('react');
-var Nav = require('../components/Nav');
+import Nav from '../components/Nav';
 var weatherHelpers = require('../utils/weatherHelpers');
 
 var NavContainer = React.createClass({

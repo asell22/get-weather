@@ -9,7 +9,7 @@ const background = styles.background,
       center = styles.center,
       button = styles.button;
 
-var Home = function({ onFormSubmit, onUpdatePlace, place}) {
+const Home = function({ onFormSubmit, onUpdatePlace, place}) {
 
   return (
     <div style={background}>
