@@ -16,9 +16,9 @@ const HomeContainer = React.createClass({
     })
   },
   handleFormSubmit() {
-    let place = this.state.place;
+    let place = this.state.place || 'Petaluma, CA';
     this.context.router.push({
-      pathname: `/forecast/${place}` 
+      pathname: `/forecast/${place}`
     });
 
     this.setState({

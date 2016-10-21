@@ -18,8 +18,9 @@ const NavContainer = React.createClass({
   },
   handleFormSubmit(evt) {
     evt.preventDefault();
+    let place = this.state.place || 'Petaluma, CA'
     this.context.router.push({
-      pathname: `/forecast/${this.state.place}`
+      pathname: `/forecast/${place}`
     });
 
     this.setState({
