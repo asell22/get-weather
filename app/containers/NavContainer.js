@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 import Nav from '../components/Nav';
 var weatherHelpers = require('../utils/weatherHelpers');
 
-var NavContainer = React.createClass({
+const NavContainer = React.createClass({
 
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -38,4 +38,4 @@ var NavContainer = React.createClass({
   }
 })
 
-module.exports = NavContainer;
+export default NavContainer;

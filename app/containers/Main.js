@@ -1,11 +1,11 @@
 import React from 'react';
-import Nav from './NavContainer';
+import NavContainer from './NavContainer';
 
 const Main = React.createClass({
   render: function() {
     return (
       <div>
-        <Nav />
+        <NavContainer />
         {this.props.children}
       </div>
     )
