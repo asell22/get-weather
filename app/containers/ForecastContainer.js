@@ -37,7 +37,7 @@ var ForecastContainer = React.createClass({
   },
 
   apiRequest(city) {
-    helpers.getWeatherData(city).then(function(response) {
+    helpers.getWeatherData(city).then((response) => {
       var list = [];
       list = list.concat(response[0].data).concat(response[1].data.list);
       this.addDatesToWeatherObjects(list)
@@ -47,7 +47,7 @@ var ForecastContainer = React.createClass({
         list: list,
         city: this.props.params.city,
       })
-    }.bind(this))
+    })
   },
 
   componentDidMount() {
