@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const { backgroundStyle, headerStyle, listStyle, iconStyle, dateStyle, loadingStyle } = require('../styles/Forecast');
 
-function Forecast({ isLoading, list, city, onDetailClick }) {
+const Forecast = ({ isLoading, list, city, onDetailClick }) => {
   return (
     isLoading ?
     <div style={loadingStyle}>Loading...</div> :
@@ -59,5 +59,4 @@ Forecast.propTypes = {
   onDetailClick: PropTypes.func.isRequired
 }
 
-// module.exports = Forecast;
 export default Forecast;

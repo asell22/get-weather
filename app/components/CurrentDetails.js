@@ -4,7 +4,7 @@ import { merge } from 'lodash';
 import { iconStyle, dateStyle, headerStyle } from '../styles/Detail'
 import { center } from '../styles/index';
 
-function CurrentDetails({details}) {
+const CurrentDetails = ({details}) => {
   const { icon, date, city, description, temp, humidity } = details;
   return (
     <div style={{paddingTop: '100px'}} className="container">
@@ -18,6 +18,6 @@ function CurrentDetails({details}) {
       </div>
     </div>
   )
-}
+};
 
 export default CurrentDetails;

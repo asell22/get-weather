@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 import { iconStyle, dateStyle, headerStyle } from '../styles/Detail';
 import { center } from '../styles/index';
 
-function ForecastDetails({ details }) {
+const ForecastDetails = ({ details }) => {
   const { icon, date, city, description, max, min, humidity } = details;
   return (
     <div style={{paddingTop: '100px'}} className="container">

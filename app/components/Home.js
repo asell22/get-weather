@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 
 import { background, content, header, input, center, button} from '../styles';
 
-const Home = function({ onFormSubmit, onUpdatePlace, place}) {
+const Home = ({ onFormSubmit, onUpdatePlace, place}) => {
 
   return (
     <div style={background}>

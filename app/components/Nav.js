@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import { nav, color, margin } from '../styles/Nav';
 
-const Nav = function({ onFormSubmit, onUpdatePlace, place }) {
+const Nav = ({ onFormSubmit, onUpdatePlace, place }) => {
   return (
     <nav className="navbar navbar-default navbar-fixed-top" style={nav}>
       <div className="container">

@@ -4,7 +4,7 @@ import helpers from '../utils/weatherHelpers';
 import moment from 'moment';
 import { v4 } from 'node-uuid';
 
-var ForecastContainer = React.createClass({
+const ForecastContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -16,17 +16,17 @@ var ForecastContainer = React.createClass({
     }
   },
   handleDetailClick(details) {
-    var city = this.state.city;
+    let city = this.state.city;
     this.context.router.push({
       pathname: '/detail/' + city,
       state: {details: details}
     })
   },
   addDatesToWeatherObjects(list) {
-    var day = new Date(Date.now())
+    let day = new Date(Date.now())
 
     return list.map(function(obj, indx) {
-      var date = moment(day).add(indx, 'day').format('dddd, MMM D');
+      let date = moment(day).add(indx, 'day').format('dddd, MMM D');
       if (indx === 0) {
         obj.date = 'Current Weather'
       } else {

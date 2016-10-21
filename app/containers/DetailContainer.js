@@ -4,7 +4,7 @@ import ForecastDetails from '../components/ForecastDetails';
 
 const DetailContainer = React.createClass({
   render() {
-    var details = this.props.location.state.details;
+    let details = this.props.location.state.details;
 
     if (details.type === 'current') {
       return <CurrentDetails details={details} />
