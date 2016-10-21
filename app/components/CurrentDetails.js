@@ -1,7 +1,7 @@
 import React from 'react';
 import { merge } from 'lodash';
 
-import { iconStyle, dateStyle, headerStyle } from '../styles/Detail'
+import { iconStyle, dateStyle, headerStyle } from '../styles/Detail';
 import { center } from '../styles/index';
 
 const CurrentDetails = ({details}) => {

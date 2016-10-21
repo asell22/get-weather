@@ -18,7 +18,7 @@ const HomeContainer = React.createClass({
   handleFormSubmit() {
     let place = this.state.place;
     this.context.router.push({
-      pathname: '/forecast/' + place
+      pathname: `/forecast/${place}` 
     });
 
     this.setState({

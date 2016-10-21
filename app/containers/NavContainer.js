@@ -19,7 +19,7 @@ const NavContainer = React.createClass({
   handleFormSubmit(evt) {
     evt.preventDefault();
     this.context.router.push({
-      pathname: '/forecast/' + this.state.place
+      pathname: `/forecast/${this.state.place}`
     });
 
     this.setState({

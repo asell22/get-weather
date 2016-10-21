@@ -18,7 +18,7 @@ const ForecastContainer = React.createClass({
   handleDetailClick(details) {
     let city = this.state.city;
     this.context.router.push({
-      pathname: '/detail/' + city,
+      pathname: `/detail/ ${city}`,
       state: {details: details}
     })
   },
