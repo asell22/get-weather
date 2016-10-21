@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 import Forecast from '../components/Forecast';
 var weatherHelpers = require('../utils/weatherHelpers');
-var moment = require('moment');
-var v4 = require('node-uuid').v4;
+import moment from 'moment';
+import { v4 } from 'node-uuid';
 
 var ForecastContainer = React.createClass({
   contextTypes: {
@@ -70,4 +70,4 @@ var ForecastContainer = React.createClass({
   }
 })
 
-module.exports = ForecastContainer;
+export default ForecastContainer;

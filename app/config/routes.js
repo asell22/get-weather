@@ -3,7 +3,7 @@ import React from 'react';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 var Main = require('../containers/Main');
 import Home from '../containers/HomeContainer';
-var Forecast = require('../containers/ForecastContainer');
+import ForecastContainer from '../containers/ForecastContainer'
 import DetailContainer from '../containers/DetailContainer';
 
 
@@ -11,7 +11,7 @@ var routes = (
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Home} />
-      <Route path="forecast/:city" component={Forecast} />
+      <Route path="forecast/:city" component={ForecastContainer} />
       <Route path="detail/:city" component={DetailContainer} />
     </Route>
   </Router>
