@@ -1,27 +1,26 @@
-var React = require('react');
-var merge = require('lodash/merge');
+import React from 'react';
+import { merge } from 'lodash';
 
-var icon = require('../styles/Detail').icon;
-var date = require('../styles/Detail').date;
-var center = require('../styles/index').center;
-var header = require('../styles/Detail').header;
+const iconStyle = require('../styles/Detail').icon,
+      dateStyle = require('../styles/Detail').date,
+      center = require('../styles/index').center,
+      header = require('../styles/Detail').header;
 
-function ForecastDetails(props) {
-  console.log('FORECAST DEETS:', props);
-  var details = props.details;
+function ForecastDetails({ details }) {
+  const { icon, date, city, description, max, min, humidity } = details;
   return (
     <div style={{paddingTop: '100px'}} className="container">
       <div style={merge({}, center, {textAlign: 'center'})}>
-        <i className={details.icon} style={merge({}, icon, {marginTop:'20px'})}></i>
-        <h2 style={date}>{details.date}</h2>
-        <h1 style={header}>{details.city}</h1>
-        <h1 style={header}>{details.description}</h1>
-        <h1 style={header}>max temp: {details.max} degrees</h1>
-        <h1 style={header}>min temp: {details.min} degrees</h1>
-        <h1 style={header}>humidity: {details.humidity} degrees</h1>
+        <i className={icon} style={merge({}, iconStyle, {marginTop:'20px'})}></i>
+        <h2 style={dateStyle}>{date}</h2>
+        <h1 style={header}>{city}</h1>
+        <h1 style={header}>{description}</h1>
+        <h1 style={header}>max temp: {max} degrees</h1>
+        <h1 style={header}>min temp: {min} degrees</h1>
+        <h1 style={header}>humidity: {humidity} degrees</h1>
       </div>
     </div>
   )
 }
 
-module.exports = ForecastDetails;
+export default ForecastDetails;

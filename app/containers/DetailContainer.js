@@ -1,6 +1,6 @@
 var React = require('react');
 import CurrentDetails from '../components/CurrentDetails';
-var ForecastDetails = require('../components/ForecastDetails');
+import ForecastDetails from '../components/ForecastDetails';
 
 var DetailContainer = React.createClass({
   render: function() {

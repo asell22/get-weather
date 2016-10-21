@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
-var styles = require('../styles/Forecast');
+const styles = require('../styles/Forecast');
 
-var bg = styles.background,
+const bg = styles.background,
     header = styles.header,
     listStyle = styles.list,
     icon = styles.icon,
