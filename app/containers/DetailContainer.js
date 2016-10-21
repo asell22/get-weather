@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 import CurrentDetails from '../components/CurrentDetails';
 import ForecastDetails from '../components/ForecastDetails';
 
-var DetailContainer = React.createClass({
+const DetailContainer = React.createClass({
   render: function() {
     var details = this.props.location.state.details;
 
@@ -14,4 +14,4 @@ var DetailContainer = React.createClass({
   }
 })
 
-module.exports = DetailContainer;
+export default DetailContainer;
