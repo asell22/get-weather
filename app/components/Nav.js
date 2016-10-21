@@ -1,11 +1,6 @@
 import React, { PropTypes } from 'react';
 
-
-const navStyles = require('../styles/Nav');
-const nav = navStyles.nav,
-      color = navStyles.color,
-      borderColor = navStyles.borderColor,
-      margin = navStyles.margin;
+import { nav, color, margin } from '../styles/Nav';
 
 const Nav = function({ onFormSubmit, onUpdatePlace, place }) {
   return (
