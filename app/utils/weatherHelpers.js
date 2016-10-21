@@ -10,7 +10,7 @@ function getFiveDayForecast(location) {
 }
 
 var helpers = {
-  getWeatherData: function(location) {
+  getWeatherData(location) {
     return axios.all([getCurrentWeather(location), getFiveDayForecast(location)])
   }
 };

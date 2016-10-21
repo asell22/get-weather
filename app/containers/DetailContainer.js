@@ -3,7 +3,7 @@ import CurrentDetails from '../components/CurrentDetails';
 import ForecastDetails from '../components/ForecastDetails';
 
 const DetailContainer = React.createClass({
-  render: function() {
+  render() {
     var details = this.props.location.state.details;
 
     if (details.type === 'current') {

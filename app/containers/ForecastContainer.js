@@ -8,21 +8,21 @@ var ForecastContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-  getInitialState: function() {
+  getInitialState() {
     return {
       isLoading: true,
       list: [],
       city: ''
     }
   },
-  handleDetailClick: function(details) {
+  handleDetailClick(details) {
     var city = this.state.city;
     this.context.router.push({
       pathname: '/detail/' + city,
       state: {details: details}
     })
   },
-  addDatesToWeatherObjects: function(list) {
+  addDatesToWeatherObjects(list) {
     var day = new Date(Date.now())
 
     return list.map(function(obj, indx) {
@@ -36,7 +36,7 @@ var ForecastContainer = React.createClass({
     });
   },
 
-  apiRequest: function(city) {
+  apiRequest(city) {
     helpers.getWeatherData(city).then(function(response) {
       var list = [];
       list = list.concat(response[0].data).concat(response[1].data.list);
@@ -50,15 +50,15 @@ var ForecastContainer = React.createClass({
     }.bind(this))
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.apiRequest(this.props.params.city);
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.apiRequest(nextProps.params.city)
   },
 
-  render: function() {
+  render() {
     return (
       <Forecast
         isLoading={this.state.isLoading}

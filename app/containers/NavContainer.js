@@ -6,17 +6,17 @@ const NavContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-  getInitialState: function() {
+  getInitialState() {
     return {
       place: ''
     }
   },
-  handleUpdatePlace: function(evt) {
+  handleUpdatePlace(evt) {
     this.setState({
       place: evt.target.value
     })
   },
-  handleFormSubmit: function(evt) {
+  handleFormSubmit(evt) {
     evt.preventDefault();
     this.context.router.push({
       pathname: '/forecast/' + this.state.place
@@ -26,7 +26,7 @@ const NavContainer = React.createClass({
       place: ''
     })
   },
-  render: function() {
+  render() {
     return (
       <Nav
         onFormSubmit={this.handleFormSubmit}

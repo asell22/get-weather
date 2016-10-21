@@ -5,17 +5,17 @@ const HomeContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-  getInitialState: function() {
+  getInitialState() {
     return {
       place: ''
     }
   },
-  handleUpdatePlace: function(evt) {
+  handleUpdatePlace(evt) {
     this.setState({
       place: evt.target.value
     })
   },
-  handleFormSubmit: function() {
+  handleFormSubmit() {
     var place = this.state.place;
     this.context.router.push({
       pathname: '/forecast/' + place
@@ -25,7 +25,7 @@ const HomeContainer = React.createClass({
       place: ''
     })
   },
-  render: function() {
+  render() {
     return (
       <Home
         onUpdatePlace={this.handleUpdatePlace}
