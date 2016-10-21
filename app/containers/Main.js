@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 import Nav from './NavContainer';
 
-var Main = React.createClass({
+const Main = React.createClass({
   render: function() {
     return (
       <div>
@@ -12,4 +12,4 @@ var Main = React.createClass({
   }
 });
 
-module.exports = Main;
+export default Main;

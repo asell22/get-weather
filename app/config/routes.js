@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-var Main = require('../containers/Main');
+import Main from '../containers/Main';
 import HomeContainer from '../containers/HomeContainer';
 import ForecastContainer from '../containers/ForecastContainer'
 import DetailContainer from '../containers/DetailContainer';
