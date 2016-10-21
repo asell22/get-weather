@@ -1,28 +1,29 @@
-var styles = {
-  background: {
-    background: '#9fcfb8',
-    height: '100vh'
-  },
-  content: {
-    paddingTop: '100px',
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: '50px',
-    color: '#fff',
-    fontWeight: '100'
-  },
-  input: {
-    width: '180px',
-  },
-  center: {
-    position: 'fixed',
-    left: '50%',
-    transform: 'translateX(-50%)',
-  },
-  button: {
-    marginTop: '45px'
-  }
+export const background = {
+  background: '#9fcfb8',
+  height: '100vh'
 }
 
-module.exports = styles;
+export const content = {
+  paddingTop: '100px'
+}
+
+export const header = {
+  textAlign: 'center',
+  fontSize: '50px',
+  color: '#fff',
+  fontWeight: '100'
+}
+
+export const input = {
+  width: '180px'
+}
+
+export const center = {
+  position: 'fixed',
+  left: '50%',
+  transform: 'translateX(-50%)'
+}
+
+export const button = {
+  marginTop: '45px'
+}

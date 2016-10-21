@@ -1,21 +1,14 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
-const styles = require('../styles/Forecast');
-
-const bg = styles.background,
-    header = styles.header,
-    listStyle = styles.list,
-    icon = styles.icon,
-    dateStyle = styles.date,
-    loading = styles.loading;
+const { backgroundStyle, headerStyle, listStyle, iconStyle, dateStyle, loadingStyle } = require('../styles/Forecast');
 
 function Forecast({ isLoading, list, city, onDetailClick }) {
   return (
     isLoading ?
-    <div style={loading}>Loading...</div> :
-    <div style={bg} className="container">
-      <h1 style={header}>{city}</h1>
+    <div style={loadingStyle}>Loading...</div> :
+    <div style={backgroundStyle} className="container">
+      <h1 style={headerStyle}>{city}</h1>
       <ul className="row">
         {list.map(function(obj,indx) {
           let prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
@@ -52,7 +45,7 @@ function Forecast({ isLoading, list, city, onDetailClick }) {
             }
           }
 
-        return <li onClick={function() {onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={listStyle}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
+        return <li onClick={function() {onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={listStyle}> <i className={prefix + obj.weather[0].id} style={iconStyle}></i><span style={dateStyle}>{obj.date}</span></li>
         })}
       </ul>
     </div>

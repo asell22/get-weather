@@ -2,10 +2,9 @@ import React from 'react';
 import { merge } from 'lodash';
 
 import { iconStyle, dateStyle, headerStyle } from '../styles/Detail'
-var center = require('../styles/index').center;
+import { center } from '../styles/index';
 
 function CurrentDetails({details}) {
-  console.log('Header Style:', headerStyle);
   const { icon, date, city, description, temp, humidity } = details;
   return (
     <div style={{paddingTop: '100px'}} className="container">

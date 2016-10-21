@@ -1,13 +1,7 @@
 import React, { PropTypes } from 'react';
 import { merge } from 'lodash';
 
-const styles = require('../styles');
-const background = styles.background,
-      content = styles.content,
-      header = styles.header,
-      input = styles.input,
-      center = styles.center,
-      button = styles.button;
+import { background, content, header, input, center, button} from '../styles';
 
 const Home = function({ onFormSubmit, onUpdatePlace, place}) {
 
