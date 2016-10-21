@@ -1,28 +1,28 @@
-var React = require('react');
-var PropTypes = require('react').PropTypes;
-var merge = require('lodash/merge');
+import React, { PropTypes } from 'react';
+import { merge } from 'lodash';
 
-var styles = require('../styles');
-var background = styles.background,
-    content = styles.content,
-    header = styles.header,
-    input = styles.input,
-    center = styles.center,
-    button = styles.button;
+const styles = require('../styles');
+const background = styles.background,
+      content = styles.content,
+      header = styles.header,
+      input = styles.input,
+      center = styles.center,
+      button = styles.button;
 
-var Home = function(props) {
+var Home = function({ onFormSubmit, onUpdatePlace, place}) {
+
   return (
     <div style={background}>
       <div className="container" style={content}>
         <h2 style={header}>Enter a City and State</h2>
-        <form onSubmit={props.onFormSubmit}>
+        <form onSubmit={onFormSubmit}>
           <input
             type="text"
             className="form-control"
             style={merge({}, input, center)}
             placeholder="Petaluma, CA"
-            onChange={props.onUpdatePlace}
-            value={props.place}
+            onChange={onUpdatePlace}
+            value={place}
           />
           <button
             className="btn btn-success"
@@ -42,4 +42,4 @@ Home.propTypes = {
   place: PropTypes.string.isRequired
 }
 
-module.exports = Home;
+export default Home;

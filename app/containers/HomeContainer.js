@@ -1,5 +1,5 @@
 var React = require('react');
-var Home = require('../components/Home');
+import Home from '../components/Home';
 var weatherHelpers = require('../utils/weatherHelpers');
 
 var HomeContainer = React.createClass({
