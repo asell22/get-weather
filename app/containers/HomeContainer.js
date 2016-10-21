@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 import Home from '../components/Home';
 var weatherHelpers = require('../utils/weatherHelpers');
 
-var HomeContainer = React.createClass({
+const HomeContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
@@ -37,4 +37,5 @@ var HomeContainer = React.createClass({
   }
 })
 
-module.exports = HomeContainer;
+export default HomeContainer;
+// module.exports = HomeContainer;
