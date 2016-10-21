@@ -1,61 +1,58 @@
-var React = require('react');
-var PropTypes = require('react').PropTypes;
-var Link = require('react-router').Link
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 var styles = require('../styles/Forecast');
 
 var bg = styles.background,
     header = styles.header,
-    list = styles.list,
+    listStyle = styles.list,
     icon = styles.icon,
     dateStyle = styles.date,
     loading = styles.loading;
 
-function Forecast(props) {
-
+function Forecast({ isLoading, list, city, onDetailClick }) {
   return (
-    props.isLoading ?
+    isLoading ?
     <div style={loading}>Loading...</div> :
     <div style={bg} className="container">
-      <h1 style={header}>{props.city}</h1>
+      <h1 style={header}>{city}</h1>
       <ul className="row">
-        {props.list.map(function(obj,indx) {
-          var prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
-          var city = props.city;
-          var date = obj.date;
-          var description = obj.weather[0].description;
+        {list.map(function(obj,indx) {
+          let prefix = obj.weather[0].icon.includes('n') ? 'wi wi-owm-night-' : 'wi wi-owm-day-';
+          let date = obj.date;
+          let description = obj.weather[0].description;
 
           if (obj.main) {
-            var temp = obj.main.temp;
-            var humidity = obj.main.humidity;
+            let temp = obj.main.temp;
+            let humidity = obj.main.humidity;
 
             var details = {
               type: 'current',
-              city: city,
-              date: date,
-              description: description,
-              temp: temp,
-              humidity: humidity,
+              city,
+              date,
+              description,
+              temp,
+              humidity,
               icon: prefix + obj.weather[0].id
             }
           } else {
-            var max = obj.temp.max;
-            var min = obj.temp.min;
-            var humidity = obj.humidity;
+            let max = obj.temp.max;
+            let min = obj.temp.min;
+            let humidity = obj.humidity;
 
             var details = {
               type: 'forecast',
-              city: city,
-              date: date,
-              description: description,
-              max: max,
-              min: min,
-              humidity: humidity,
+              city,
+              date,
+              description,
+              max,
+              min,
+              humidity,
               icon: prefix + obj.weather[0].id
             }
           }
 
-        return <li onClick={function() {props.onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={list}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
+        return <li onClick={function() {onDetailClick(details)}} key={obj.listId} className="col-xs-4" style={listStyle}> <i className={prefix + obj.weather[0].id} style={icon}></i><span style={dateStyle}>{obj.date}</span></li>
         })}
       </ul>
     </div>
@@ -69,4 +66,5 @@ Forecast.propTypes = {
   onDetailClick: PropTypes.func.isRequired
 }
 
-module.exports = Forecast;
+// module.exports = Forecast;
+export default Forecast;

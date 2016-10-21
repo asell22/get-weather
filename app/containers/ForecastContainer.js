@@ -1,5 +1,5 @@
 var React = require('react');
-var Forecast = require('../components/Forecast');
+import Forecast from '../components/Forecast';
 var weatherHelpers = require('../utils/weatherHelpers');
 var moment = require('moment');
 var v4 = require('node-uuid').v4;

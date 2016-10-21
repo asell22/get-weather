@@ -7,6 +7,7 @@ var center = require('../styles/index').center;
 var header = require('../styles/Detail').header;
 
 function ForecastDetails(props) {
+  console.log('FORECAST DEETS:', props);
   var details = props.details;
   return (
     <div style={{paddingTop: '100px'}} className="container">
