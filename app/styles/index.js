@@ -9,7 +9,7 @@ export const content = {
 
 export const header = {
   textAlign: 'center',
-  fontSize: '50px',
+  fontSize: '40px',
   color: '#fff',
   fontWeight: '100'
 }

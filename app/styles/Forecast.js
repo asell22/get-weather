@@ -5,7 +5,7 @@ export const backgroundStyle = {
 export const headerStyle = {
   textAlign: 'center',
   fontWeight: '100',
-  fontSize: '50px'
+  fontSize: '35px'
 }
 
 export const listStyle = {

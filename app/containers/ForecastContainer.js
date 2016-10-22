@@ -44,7 +44,7 @@ const ForecastContainer = React.createClass({
 
       this.setState({
         isLoading: false,
-        list: list,
+        list,
         city: this.props.params.city,
       })
     })

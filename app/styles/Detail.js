@@ -14,5 +14,5 @@ export const dateStyle = {
 export const headerStyle = {
   textAlign: 'center',
   fontWeight: '100',
-  fontSize: '50px'
+  fontSize: '35px'
 }
