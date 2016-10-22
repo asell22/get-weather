@@ -36,18 +36,18 @@ const ForecastContainer = React.createClass({
     });
   },
 
-  apiRequest(city) {
-    helpers.getWeatherData(city).then((response) => {
-      var list = [];
-      list = list.concat(response[0].data).concat(response[1].data.list);
-      this.addDatesToWeatherObjects(list)
+  async apiRequest(city) {
+    let weatherInfo = await helpers.getWeatherData(city);
+    let list = [];
 
-      this.setState({
-        isLoading: false,
-        list,
-        city: this.props.params.city,
-      })
-    })
+    list = list.concat(weatherInfo[0].data).concat(weatherInfo[1].data.list);
+    this.addDatesToWeatherObjects(list);
+    
+    this.setState({
+      isLoading: false,
+      list,
+      city: this.props.params.city
+    });
   },
 
   componentDidMount() {
